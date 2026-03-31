@@ -5,204 +5,400 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Billy James Cruz - Patient Care Assistant Resume</title>
 <style>
-  @page { margin: 0.5in 0.6in; size: letter; }
+  @page { margin: 0.35in 0.5in; size: letter; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 10.2pt;
-    line-height: 1.4;
-    color: #1a1a1a;
-    max-width: 7.5in;
+    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 9.8pt;
+    line-height: 1.42;
+    color: #2d2d2d;
+    max-width: 8in;
     margin: 0 auto;
-    padding: 0.5in 0.6in;
+    padding: 0.35in 0.5in;
     -webkit-print-color-adjust: exact;
     -webkit-text-size-adjust: 100%;
     print-color-adjust: exact;
   }
-  h1 {
-    font-family: 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif;
-    font-size: 18pt;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #003366;
-    margin-bottom: 2px;
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #0a2647;
+    margin-bottom: 10px;
   }
-  .contact {
-    font-family: 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif;
-    font-size: 9.5pt;
-    color: #444;
-    margin-bottom: 5px;
+  .header-left h1 {
+    font-size: 22pt;
+    font-weight: 800;
+    color: #0a2647;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
   }
-  .contact a { color: #444; text-decoration: none; }
-  .divider {
-    border: none;
-    border-top: 2.5px solid #003366;
-    margin: 5px 0 8px 0;
-  }
-  h2 {
-    font-family: 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif;
-    font-size: 11pt;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: #003366;
-    border-bottom: 1.5px solid #003366;
-    padding-bottom: 2px;
-    margin-top: 10px;
-    margin-bottom: 4px;
-  }
-  .summary {
-    font-size: 10.2pt;
-    color: #2a2a2a;
-    margin-bottom: 2px;
-  }
-  .skills {
+  .header-left .tagline {
     font-size: 10pt;
-    color: #2a2a2a;
+    color: #4a7fb5;
+    font-weight: 500;
+    margin-top: 2px;
+    letter-spacing: 0.3px;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 9pt;
+    color: #444;
+    line-height: 1.6;
+  }
+  .header-right a { color: #444; text-decoration: none; }
+  .header-right span {
+    display: block;
+  }
+
+  /* ── SECTIONS ── */
+  h2 {
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0a2647;
+    margin-top: 11px;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1.5px solid #d0d8e0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 12px;
+    background: #4a7fb5;
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+
+  /* ── SUMMARY ── */
+  .summary {
+    font-size: 9.5pt;
+    color: #3a3a3a;
+    line-height: 1.5;
+    padding: 6px 10px;
+    background: #f4f7fa;
+    border-left: 3px solid #4a7fb5;
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* ── SKILLS GRID ── */
+  .skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    margin-bottom: 2px;
+  }
+  .skill-group {
+    margin-bottom: 4px;
+    width: 100%;
+  }
+  .skill-group-title {
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0a2647;
+    margin-bottom: 3px;
+  }
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  .skill-tag {
+    display: inline-block;
+    font-size: 8.5pt;
+    padding: 2px 8px;
+    background: #e8eef5;
+    color: #1a3a5c;
+    border-radius: 3px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .skill-tag.highlight {
+    background: #0a2647;
+    color: #fff;
+  }
+
+  /* ── ENTRIES ── */
+  .entry {
+    margin-top: 5px;
+    page-break-inside: avoid;
   }
   .entry-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: nowrap;
-    margin-top: 5px;
-    margin-bottom: 1px;
   }
   .entry-title {
     font-weight: 700;
-    font-size: 10.2pt;
+    font-size: 10pt;
     color: #1a1a1a;
-    flex-shrink: 1;
-    min-width: 0;
   }
   .entry-date {
-    font-size: 9.5pt;
-    color: #444;
+    font-size: 9pt;
+    color: #666;
     white-space: nowrap;
     flex-shrink: 0;
-    padding-left: 8px;
+    padding-left: 10px;
+    font-weight: 500;
   }
   .entry-org {
-    font-size: 10pt;
-    color: #333;
-    margin-bottom: 1px;
+    font-size: 9pt;
+    color: #4a7fb5;
+    font-weight: 500;
+    margin-bottom: 2px;
   }
   ul {
-    padding-left: 16px;
-    margin-bottom: 2px;
-    page-break-inside: avoid;
+    padding-left: 15px;
+    margin-bottom: 0;
   }
   li {
-    font-size: 10.2pt;
-    margin-bottom: 1.5px;
-    color: #2a2a2a;
+    font-size: 9.5pt;
+    margin-bottom: 1px;
+    color: #3a3a3a;
+    line-height: 1.4;
   }
-  .cert-list {
-    list-style: none;
-    padding-left: 0;
+  li::marker {
+    color: #4a7fb5;
   }
-  .cert-list li { padding: 1px 0; }
+
+  /* ── CERTS ── */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+  .cert-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 9pt;
+    padding: 4px 8px;
+    background: #f4f7fa;
+    border-radius: 4px;
+    line-height: 1.4;
+  }
+  .cert-item.full-width {
+    grid-column: 1 / -1;
+  }
+  .cert-icon {
+    color: #4a7fb5;
+    font-weight: 700;
+    font-size: 10pt;
+    flex-shrink: 0;
+    line-height: 1.3;
+  }
+  .cert-name {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  .cert-detail {
+    color: #666;
+    font-size: 8.5pt;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2px 0;
+    font-size: 9.5pt;
+  }
+  .edu-name { font-weight: 600; color: #1a1a1a; }
+  .edu-detail { color: #666; font-size: 9pt; }
+
   @media print {
     body { padding: 0; width: 100%; max-width: none; }
+    .summary { -webkit-print-color-adjust: exact; }
+    .skill-tag, .cert-item { -webkit-print-color-adjust: exact; }
   }
 </style>
 </head>
 <body>
 
-<h1>Billy James Cruz</h1>
-<div class="contact">Houston, TX Area | (409) 673-4859 | <a href="mailto:billyjcruz@icloud.com">billyjcruz@icloud.com</a></div>
-<hr class="divider">
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <h1>Billy James Cruz</h1>
+    <div class="tagline">EMT-Certified | BLS Provider | Bilingual (EN/ES)</div>
+  </div>
+  <div class="header-right">
+    <span>Houston, TX Area</span>
+    <span>(409) 673-4859</span>
+    <span><a href="mailto:billyjcruz@icloud.com">billyjcruz@icloud.com</a></span>
+  </div>
+</div>
 
+<!-- SUMMARY -->
 <h2>Professional Summary</h2>
 <div class="summary">
 EMT-certified, BLS-credentialed professional with direct patient care experience on ambulance ride-alongs with the Seguin Fire Department. Trained in patient assessment, vital signs, oxygen administration, Activities of Daily Living (ADLs), and HIPAA-compliant documentation. Proficient Spanish speaker. Two years leading a team of 8 at a 2,000-member facility. Pursuing a long-term career in hospital-based patient care at Houston Methodist The Woodlands.
 </div>
 
+<!-- SKILLS -->
 <h2>Skills</h2>
-<div class="skills">
-Patient Assessment | Activities of Daily Living (ADLs) | Vital Signs Monitoring | Basic Life Support (BLS) | Direct Patient Care | Patient Documentation and Charting | HIPAA Compliance | Fall Prevention | Pressure Injury Prevention | Hospital-Acquired Infection Prevention | Hourly Rounding and Four P's | Bedside Shift Handoff | Call Light Response | Oxygen Administration | Interprofessional Team Communication | Patient and Family-Centered Care | Bilingual: English and Spanish
+<div class="skill-group">
+  <div class="skill-group-title">Clinical</div>
+  <div class="skill-tags">
+    <span class="skill-tag highlight">Direct Patient Care</span>
+    <span class="skill-tag highlight">Basic Life Support (BLS)</span>
+    <span class="skill-tag">Patient Assessment</span>
+    <span class="skill-tag">Activities of Daily Living (ADLs)</span>
+    <span class="skill-tag">Vital Signs Monitoring</span>
+    <span class="skill-tag">Oxygen Administration</span>
+    <span class="skill-tag">Patient Documentation and Charting</span>
+    <span class="skill-tag">Bedside Shift Handoff</span>
+  </div>
+</div>
+<div class="skill-group">
+  <div class="skill-group-title">Safety and Compliance</div>
+  <div class="skill-tags">
+    <span class="skill-tag">HIPAA Compliance</span>
+    <span class="skill-tag">Fall Prevention</span>
+    <span class="skill-tag">Pressure Injury Prevention</span>
+    <span class="skill-tag">Hospital-Acquired Infection Prevention</span>
+    <span class="skill-tag">Hourly Rounding and Four P's</span>
+    <span class="skill-tag">Call Light Response</span>
+  </div>
+</div>
+<div class="skill-group">
+  <div class="skill-group-title">Communication</div>
+  <div class="skill-tags">
+    <span class="skill-tag highlight">Bilingual: English and Spanish</span>
+    <span class="skill-tag">Patient and Family-Centered Care</span>
+    <span class="skill-tag">Interprofessional Team Communication</span>
+  </div>
 </div>
 
+<!-- CLINICAL EXPERIENCE -->
 <h2>Healthcare Training and Clinical Experience</h2>
 
-<div class="entry-header">
-  <span class="entry-title">Emergency Medical Technician</span>
-  <span class="entry-date">Jan 2025 - May 2025</span>
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Emergency Medical Technician</span>
+    <span class="entry-date">Jan 2025 - May 2025</span>
+  </div>
+  <div class="entry-org">EMS University | San Antonio, TX | Clinical Rotations: Seguin Fire Department</div>
+  <ul>
+    <li>Completed full EMT certification program including clinical ride-alongs with the Seguin Fire Department, providing direct patient care on emergency ambulance calls.</li>
+    <li>Assessed patients in the field: obtained vital signs (BP, pulse, SpO2, respiration rate), monitored condition changes, and documented findings per HIPAA protocol.</li>
+    <li>Assisted paramedics with oxygen delivery via nasal cannula and non-rebreather mask, oral medication administration, and c-spine stabilization.</li>
+    <li>Delivered verbal patient handoff reports to ER receiving staff, communicating chief complaint, vitals, interventions performed, and changes in condition.</li>
+    <li>Repositioned patients on stretchers and backboards, applied cervical collars, and prioritized patient comfort and safety during transport.</li>
+  </ul>
 </div>
-<div class="entry-org">EMS University | San Antonio, TX | Clinical Rotations: Seguin Fire Department</div>
-<ul>
-  <li>Completed full EMT certification program including clinical ride-alongs with the Seguin Fire Department, providing direct patient care on emergency ambulance calls.</li>
-  <li>Assessed patients in the field: obtained vital signs (BP, pulse, SpO2, respiration rate), monitored condition changes, and documented findings per HIPAA protocol.</li>
-  <li>Assisted paramedics with oxygen delivery via nasal cannula and non-rebreather mask, oral medication administration, and c-spine stabilization.</li>
-  <li>Delivered verbal patient handoff reports to ER receiving staff, communicating chief complaint, vitals, interventions performed, and changes in condition.</li>
-  <li>Repositioned patients on stretchers and backboards, applied cervical collars, and prioritized patient comfort and safety during transport.</li>
-</ul>
 
-<div class="entry-header">
-  <span class="entry-title">Recruit Fire Academy</span>
-  <span class="entry-date">2025</span>
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Recruit Fire Academy</span>
+    <span class="entry-date">2025</span>
+  </div>
+  <div class="entry-org">TEEX | College Station, TX</div>
+  <ul>
+    <li>Completed emergency medical response training including triage, rapid patient assessment, and coordinated team communication during multi-casualty simulations.</li>
+    <li>Applied scene safety, BSI/PPE protocols, and contamination prevention procedures in live training scenarios.</li>
+  </ul>
 </div>
-<div class="entry-org">TEEX | College Station, TX</div>
-<ul>
-  <li>Completed emergency medical response training including triage, rapid patient assessment, and coordinated team communication during multi-casualty simulations.</li>
-  <li>Applied scene safety, BSI/PPE protocols, and contamination prevention procedures in live training scenarios.</li>
-</ul>
 
+<!-- WORK EXPERIENCE -->
 <h2>Work Experience</h2>
 
-<div class="entry-header">
-  <span class="entry-title">Team Lead</span>
-  <span class="entry-date">2023 - 2025</span>
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Team Lead</span>
+    <span class="entry-date">2023 - 2025</span>
+  </div>
+  <div class="entry-org">Lift ATX | Austin, TX</div>
+  <ul>
+    <li>Led a team of 8 staff members, coordinating daily schedules and ensuring full shift coverage across a facility serving 2,000+ active members.</li>
+    <li>Maintained safety, cleanliness, and supply readiness throughout the facility, responding to safety concerns and member requests promptly.</li>
+    <li>Trained and oriented new team members on safety protocols, customer service standards, and daily operational procedures.</li>
+  </ul>
 </div>
-<div class="entry-org">Lift ATX | Austin, TX</div>
-<ul>
-  <li>Led a team of 8 staff members, coordinating daily schedules and ensuring full shift coverage across a facility serving 2,000+ active members.</li>
-  <li>Maintained safety, cleanliness, and supply readiness throughout the facility, responding to safety concerns and member requests promptly.</li>
-  <li>Trained and oriented new team members on safety protocols, customer service standards, and daily operational procedures.</li>
-</ul>
 
-<div class="entry-header">
-  <span class="entry-title">Project Analyst (Contract)</span>
-  <span class="entry-date">2023</span>
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Project Analyst (Contract)</span>
+    <span class="entry-date">2023</span>
+  </div>
+  <div class="entry-org">TTM Analytics | Austin, TX</div>
+  <ul>
+    <li>Collected and analyzed demographic and health data to support community wellness programs in underserved populations.</li>
+    <li>Produced detailed data reports for stakeholders with strict attention to accuracy and clear documentation standards.</li>
+  </ul>
 </div>
-<div class="entry-org">TTM Analytics | Austin, TX</div>
-<ul>
-  <li>Collected and analyzed demographic and health data to support community wellness programs in underserved populations.</li>
-  <li>Produced detailed data reports for stakeholders with strict attention to accuracy and clear documentation standards.</li>
-</ul>
 
-<div class="entry-header">
-  <span class="entry-title">Director of Operations and Communications</span>
-  <span class="entry-date">2022 - 2023</span>
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Director of Operations and Communications</span>
+    <span class="entry-date">2022 - 2023</span>
+  </div>
+  <div class="entry-org">Nuclear Baseball Training | Austin, TX</div>
+  <ul>
+    <li>Monitored athlete health metrics (heart rate, hydration, heat index exposure) and enforced facility safety protocols across all training environments.</li>
+    <li>Communicated health observations, training progress, and safety updates to athletes and their families through regular check-ins and written reports.</li>
+  </ul>
 </div>
-<div class="entry-org">Nuclear Baseball Training | Austin, TX</div>
-<ul>
-  <li>Monitored athlete health metrics (heart rate, hydration, heat index exposure) and enforced facility safety protocols across all training environments.</li>
-  <li>Communicated health observations, training progress, and safety updates to athletes and their families through regular check-ins and written reports.</li>
-</ul>
 
-<div class="entry-header">
-  <span class="entry-title">National Scouting Coordinator</span>
-  <span class="entry-date">2019 - 2022</span>
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">National Scouting Coordinator</span>
+    <span class="entry-date">2019 - 2022</span>
+  </div>
+  <div class="entry-org">Perfect Game USA | Austin, TX</div>
+  <ul>
+    <li>Assessed 200+ athletes annually, producing detailed confidential scouting reports and maintaining strict data privacy standards across all documentation.</li>
+  </ul>
 </div>
-<div class="entry-org">Perfect Game USA | Austin, TX</div>
-<ul>
-  <li>Assessed 200+ athletes annually, producing detailed confidential scouting reports and maintaining strict data privacy standards across all documentation.</li>
-</ul>
 
+<!-- CERTIFICATIONS -->
 <h2>Certifications</h2>
-<ul class="cert-list">
-  <li><strong>Basic Life Support (BLS/CPR/AED)</strong> - American Heart Association, AHA Provider (2025)</li>
-  <li><strong>Emergency Medical Technician (EMT-Basic)</strong> - Texas Dept. of State Health Services, Certified (2025)</li>
-  <li><strong>Basic Structure Fire Suppression</strong> - Texas Commission on Fire Protection (2025)</li>
-</ul>
+<div class="cert-grid">
+  <div class="cert-item">
+    <span class="cert-icon">+</span>
+    <div>
+      <div class="cert-name">Basic Life Support (BLS/CPR/AED)</div>
+      <div class="cert-detail">American Heart Association, AHA Provider (2025)</div>
+    </div>
+  </div>
+  <div class="cert-item">
+    <span class="cert-icon">+</span>
+    <div>
+      <div class="cert-name">EMT-Basic, Certified</div>
+      <div class="cert-detail">Texas DSHS (2025)</div>
+    </div>
+  </div>
+  <div class="cert-item full-width">
+    <span class="cert-icon">+</span>
+    <div>
+      <div class="cert-name">Basic Structure Fire Suppression</div>
+      <div class="cert-detail">Texas Commission on Fire Protection (2025)</div>
+    </div>
+  </div>
+</div>
 
+<!-- EDUCATION -->
 <h2>Education</h2>
-<ul class="cert-list">
-  <li><strong>B.S. Sports Management, Public Relations</strong> - Texas Tech University, Lubbock, TX (2019)</li>
-  <li><strong>Recruit Fire Academy</strong> - TEEX, College Station, TX (2025)</li>
-</ul>
+<div class="edu-row">
+  <span class="edu-name">B.S. Sports Management, Public Relations</span>
+  <span class="edu-detail">Texas Tech University, Lubbock, TX (2019)</span>
+</div>
+<div class="edu-row">
+  <span class="edu-name">Recruit Fire Academy</span>
+  <span class="edu-detail">TEEX, College Station, TX (2025)</span>
+</div>
 
 </body>
 </html>
