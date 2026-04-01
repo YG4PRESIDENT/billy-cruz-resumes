@@ -87,20 +87,19 @@
   }
 
   /* ── SKILLS ── */
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
   }
-  .skill-tag {
-    display: inline-block;
-    font-size: 8.5pt;
-    padding: 2px 8px;
-    background: #e8eef5;
-    color: #1a3a5c;
-    border-radius: 3px;
-    font-weight: 500;
+  .skills-grid li {
+    font-size: 9.5pt;
+    color: #2d2d2d;
     line-height: 1.5;
+    margin-bottom: 0;
+  }
+  .skills-grid li::marker {
+    color: #4a7fb5;
   }
 
   /* ── ENTRIES ── */
@@ -205,7 +204,7 @@
     /* Prevent page breaks inside key sections */
     .header,
     .summary,
-    .skill-tags,
+    .skills-grid,
     .cert-grid,
     .edu-row {
       page-break-inside: avoid;
@@ -216,7 +215,6 @@
       break-inside: avoid;
     }
     /* Ensure backgrounds print */
-    .skill-tag,
     .cert-item,
     h2::before {
       -webkit-print-color-adjust: exact;
@@ -227,10 +225,7 @@
       page-break-after: avoid;
       break-after: avoid;
     }
-    /* Border fallback for B&W printing without background graphics */
-    .skill-tag {
-      border: 0.5pt solid #b0bec5;
-    }
+    /* Border fallback for B&W printing */
     .cert-item {
       border: 0.5pt solid #d0d8e0;
       page-break-inside: avoid;
@@ -276,28 +271,20 @@ BLS-certified EMT with direct patient transport experience on emergency ambulanc
 
 <!-- SKILLS -->
 <h2>Skills</h2>
-<div class="skill-tags">
-  <span class="skill-tag">Patient Transportation and Safe Handling</span>
-  <span class="skill-tag">Basic Life Support (BLS/AHA)</span>
-  <span class="skill-tag">Stretcher and Wheelchair Operation</span>
-  <span class="skill-tag">Oxygen Tank Handling</span>
-  <span class="skill-tag">IV Pump and Foley Catheter Transport</span>
-  <span class="skill-tag">Equipment Disinfection</span>
-  <span class="skill-tag">Two-Step Patient Identification</span>
-  <span class="skill-tag">Patient Handoff and Patient Passport</span>
-  <span class="skill-tag">Infection Control and Universal Precautions</span>
-  <span class="skill-tag">HIPAA Compliance</span>
-  <span class="skill-tag">Fall Prevention</span>
-  <span class="skill-tag">Pressure Injury Prevention</span>
-  <span class="skill-tag">Hospital-Acquired Infection Prevention</span>
-  <span class="skill-tag">Patient Safety Net (PSN) Reporting</span>
-  <span class="skill-tag">Inpatient and Outpatient Transport</span>
-  <span class="skill-tag">Customer Service</span>
-  <span class="skill-tag">Data Entry and Collection</span>
-  <span class="skill-tag">Technical and Professional Writing</span>
-  <span class="skill-tag">Interprofessional Team Communication</span>
-  <span class="skill-tag">Conversational Spanish</span>
-</div>
+<ul class="skills-grid">
+  <li>Patient Transportation and Safe Handling</li>
+  <li>Basic Life Support (BLS/AHA)</li>
+  <li>Stretcher and Wheelchair Operation</li>
+  <li>Oxygen Tank Handling</li>
+  <li>IV Pump and Foley Catheter Transport</li>
+  <li>Equipment Disinfection</li>
+  <li>Infection Control and Universal Precautions</li>
+  <li>Two-Step Patient Identification</li>
+  <li>Patient Safety Net (PSN) Reporting</li>
+  <li>Customer Service</li>
+  <li>Data Entry, Collection, and Interpretation</li>
+  <li>Conversational Spanish</li>
+</ul>
 
 <!-- CLINICAL EXPERIENCE -->
 <h2>Healthcare Training and Clinical Experience</h2>
@@ -320,7 +307,7 @@ BLS-certified EMT with direct patient transport experience on emergency ambulanc
 <div class="entry">
   <div class="entry-header">
     <span class="entry-title">Recruit Fire Academy</span>
-    <span class="entry-date">2025</span>
+    <span class="entry-date">Aug 2024 - Oct 2024</span>
   </div>
   <div class="entry-org">TEEX | College Station, TX</div>
   <ul>
@@ -335,7 +322,7 @@ BLS-certified EMT with direct patient transport experience on emergency ambulanc
 <div class="entry">
   <div class="entry-header">
     <span class="entry-title">Team Lead</span>
-    <span class="entry-date">2023 - 2025</span>
+    <span class="entry-date">Jan 2023 - Dec 2024</span>
   </div>
   <div class="entry-org">Lift ATX | Austin, TX</div>
   <ul>
@@ -349,7 +336,7 @@ BLS-certified EMT with direct patient transport experience on emergency ambulanc
 <div class="entry">
   <div class="entry-header">
     <span class="entry-title">Director of Operations and Communications</span>
-    <span class="entry-date">2022 - 2023</span>
+    <span class="entry-date">Jun 2022 - Jan 2023</span>
   </div>
   <div class="entry-org">Nuclear Baseball Training | Austin, TX</div>
   <ul>
@@ -361,7 +348,7 @@ BLS-certified EMT with direct patient transport experience on emergency ambulanc
 <div class="entry">
   <div class="entry-header">
     <span class="entry-title">National Scouting Coordinator</span>
-    <span class="entry-date">2019 - 2022</span>
+    <span class="entry-date">Aug 2019 - May 2022</span>
   </div>
   <div class="entry-org">Perfect Game USA | Austin, TX</div>
   <ul>
