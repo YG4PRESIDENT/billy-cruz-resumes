@@ -64,7 +64,7 @@
     margin-top: 11px;
     margin-bottom: 6px;
     padding-bottom: 3px;
-    border-bottom: 1.5px solid #d0d8e0;
+    border-bottom: 1pt solid #d0d8e0;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -221,6 +221,20 @@
     h2::before {
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
+    }
+    /* Prevent heading orphans */
+    h2 {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    /* Border fallback for B&W printing without background graphics */
+    .skill-tag {
+      border: 0.5pt solid #b0bec5;
+    }
+    .cert-item {
+      border: 0.5pt solid #d0d8e0;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
     /* Prevent orphaned bullets */
     li {
