@@ -120,16 +120,16 @@
   }
   .entry-date {
     font-size: 9pt;
-    color: #666;
+    color: #555;
+    font-style: italic;
     white-space: nowrap;
     flex-shrink: 0;
     padding-left: 10px;
-    font-weight: 500;
   }
   .entry-org {
     font-size: 9pt;
-    color: #4a7fb5;
-    font-weight: 500;
+    color: #555;
+    font-style: italic;
     margin-bottom: 2px;
   }
   ul {
@@ -139,47 +139,14 @@
   li {
     font-size: 9.5pt;
     margin-bottom: 1px;
-    color: #3a3a3a;
+    color: #2d2d2d;
     line-height: 1.4;
   }
   li::marker {
-    color: #4a7fb5;
+    color: #999;
   }
 
-  /* ── CERTS ── */
-  .cert-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px;
-  }
-  .cert-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 5px;
-    font-size: 9pt;
-    padding: 4px 8px;
-    background: #f4f7fa;
-    border-radius: 4px;
-    line-height: 1.4;
-  }
-  .cert-item.full-width {
-    grid-column: 1 / -1;
-  }
-  .cert-icon {
-    color: #4a7fb5;
-    font-weight: 700;
-    font-size: 10pt;
-    flex-shrink: 0;
-    line-height: 1.3;
-  }
-  .cert-name {
-    font-weight: 600;
-    color: #1a1a1a;
-  }
-  .cert-detail {
-    color: #666;
-    font-size: 8.5pt;
-  }
+  /* (cert-grid removed — certs now use standard ul) */
 
   /* ── EDUCATION ── */
   .edu-row {
@@ -190,7 +157,7 @@
     font-size: 9.5pt;
   }
   .edu-name { font-weight: 600; color: #1a1a1a; }
-  .edu-detail { color: #666; font-size: 9pt; }
+  .edu-detail { color: #555; font-size: 9pt; font-style: italic; }
 
   /* ── PRINT ── */
   @media print {
@@ -205,7 +172,6 @@
     .header,
     .summary,
     .skills-grid,
-    .cert-grid,
     .edu-row {
       page-break-inside: avoid;
       break-inside: avoid;
@@ -215,7 +181,6 @@
       break-inside: avoid;
     }
     /* Ensure backgrounds print */
-    .cert-item,
     h2::before {
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
@@ -224,12 +189,6 @@
     h2 {
       page-break-after: avoid;
       break-after: avoid;
-    }
-    /* Border fallback for B&W printing */
-    .cert-item {
-      border: 0.5pt solid #d0d8e0;
-      page-break-inside: avoid;
-      break-inside: avoid;
     }
     /* Prevent orphaned bullets */
     li {
