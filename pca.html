@@ -84,35 +84,13 @@
     font-size: 9.5pt;
     color: #3a3a3a;
     line-height: 1.5;
-    padding: 6px 10px;
-    background: #f4f7fa;
-    border-left: 3px solid #4a7fb5;
-    border-radius: 0 4px 4px 0;
   }
 
-  /* ── SKILLS GRID ── */
-  .skills-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 6px;
-    margin-bottom: 2px;
-  }
-  .skill-group {
-    margin-bottom: 4px;
-    width: 100%;
-  }
-  .skill-group-title {
-    font-size: 8pt;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #0a2647;
-    margin-bottom: 3px;
-  }
+  /* ── SKILLS ── */
   .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 3px;
+    gap: 4px;
   }
   .skill-tag {
     display: inline-block;
@@ -123,10 +101,6 @@
     border-radius: 3px;
     font-weight: 500;
     line-height: 1.5;
-  }
-  .skill-tag.highlight {
-    background: #0a2647;
-    color: #fff;
   }
 
   /* ── ENTRIES ── */
@@ -221,7 +195,6 @@
 
   @media print {
     body { padding: 0; width: 100%; max-width: none; }
-    .summary { -webkit-print-color-adjust: exact; }
     .skill-tag, .cert-item { -webkit-print-color-adjust: exact; }
   }
 </style>
@@ -232,7 +205,7 @@
 <div class="header">
   <div class="header-left">
     <h1>Billy James Cruz</h1>
-    <div class="tagline">EMT-Certified | BLS Provider | Bilingual (EN/ES)</div>
+    <div class="tagline">EMT-Certified | BLS Provider (AHA)</div>
   </div>
   <div class="header-right">
     <span>Houston, TX Area</span>
@@ -244,42 +217,31 @@
 <!-- SUMMARY -->
 <h2>Professional Summary</h2>
 <div class="summary">
-EMT-certified, BLS-credentialed professional with direct patient care experience on ambulance ride-alongs with the Seguin Fire Department. Trained in patient assessment, vital signs, oxygen administration, Activities of Daily Living (ADLs), and HIPAA-compliant documentation. Proficient Spanish speaker. Two years leading a team of 8 at a 2,000-member facility. Pursuing a long-term career in hospital-based patient care at Houston Methodist The Woodlands.
+EMT-certified, BLS-credentialed professional with direct patient care experience on ambulance ride-alongs with the Seguin Fire Department. Trained in patient assessment, vital signs, oxygen administration, Activities of Daily Living (ADLs), and HIPAA-compliant documentation. Two years leading a team of 8 at a 2,000-member facility. Conversational Spanish. Pursuing a long-term career in hospital-based patient care at Houston Methodist The Woodlands.
 </div>
 
 <!-- SKILLS -->
 <h2>Skills</h2>
-<div class="skill-group">
-  <div class="skill-group-title">Clinical</div>
-  <div class="skill-tags">
-    <span class="skill-tag highlight">Direct Patient Care</span>
-    <span class="skill-tag highlight">Basic Life Support (BLS)</span>
-    <span class="skill-tag">Patient Assessment</span>
-    <span class="skill-tag">Activities of Daily Living (ADLs)</span>
-    <span class="skill-tag">Vital Signs Monitoring</span>
-    <span class="skill-tag">Oxygen Administration</span>
-    <span class="skill-tag">Patient Documentation and Charting</span>
-    <span class="skill-tag">Bedside Shift Handoff</span>
-  </div>
-</div>
-<div class="skill-group">
-  <div class="skill-group-title">Safety and Compliance</div>
-  <div class="skill-tags">
-    <span class="skill-tag">HIPAA Compliance</span>
-    <span class="skill-tag">Fall Prevention</span>
-    <span class="skill-tag">Pressure Injury Prevention</span>
-    <span class="skill-tag">Hospital-Acquired Infection Prevention</span>
-    <span class="skill-tag">Hourly Rounding and Four P's</span>
-    <span class="skill-tag">Call Light Response</span>
-  </div>
-</div>
-<div class="skill-group">
-  <div class="skill-group-title">Communication</div>
-  <div class="skill-tags">
-    <span class="skill-tag highlight">Bilingual: English and Spanish</span>
-    <span class="skill-tag">Patient and Family-Centered Care</span>
-    <span class="skill-tag">Interprofessional Team Communication</span>
-  </div>
+<div class="skill-tags">
+  <span class="skill-tag">Direct Patient Care</span>
+  <span class="skill-tag">Basic Life Support (BLS)</span>
+  <span class="skill-tag">Patient Assessment</span>
+  <span class="skill-tag">Activities of Daily Living (ADLs)</span>
+  <span class="skill-tag">Vital Signs Monitoring</span>
+  <span class="skill-tag">Oxygen Administration</span>
+  <span class="skill-tag">Patient Documentation and Charting</span>
+  <span class="skill-tag">Bedside Shift Handoff</span>
+  <span class="skill-tag">HIPAA Compliance</span>
+  <span class="skill-tag">Fall Prevention</span>
+  <span class="skill-tag">Pressure Injury Prevention</span>
+  <span class="skill-tag">Hospital-Acquired Infection Prevention</span>
+  <span class="skill-tag">Hourly Rounding and Four P's</span>
+  <span class="skill-tag">Call Light Response</span>
+  <span class="skill-tag">Data Entry and Collection</span>
+  <span class="skill-tag">Technical and Professional Writing</span>
+  <span class="skill-tag">Patient and Family-Centered Care</span>
+  <span class="skill-tag">Interprofessional Team Communication</span>
+  <span class="skill-tag">Conversational Spanish</span>
 </div>
 
 <!-- CLINICAL EXPERIENCE -->
@@ -335,8 +297,8 @@ EMT-certified, BLS-credentialed professional with direct patient care experience
   </div>
   <div class="entry-org">TTM Analytics | Austin, TX</div>
   <ul>
-    <li>Collected and analyzed demographic and health data to support community wellness programs in underserved populations.</li>
-    <li>Produced detailed data reports for stakeholders with strict attention to accuracy and clear documentation standards.</li>
+    <li>Collected, entered, and analyzed demographic and health data across multiple datasets to support community wellness programs in underserved populations.</li>
+    <li>Produced detailed technical reports and professional documentation for stakeholders with strict attention to data accuracy and interpretation.</li>
   </ul>
 </div>
 
@@ -359,7 +321,7 @@ EMT-certified, BLS-credentialed professional with direct patient care experience
   </div>
   <div class="entry-org">Perfect Game USA | Austin, TX</div>
   <ul>
-    <li>Assessed 200+ athletes annually, producing detailed confidential scouting reports and maintaining strict data privacy standards across all documentation.</li>
+    <li>Collected and interpreted performance data for 200+ athletes annually, producing detailed confidential scouting reports with strict data entry accuracy and privacy standards.</li>
   </ul>
 </div>
 
