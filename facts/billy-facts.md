@@ -208,22 +208,24 @@ These are **true** facts about Billy that are deliberately **omitted** from the 
 
 Goal: drop a job posting in, get a tailored resume out, with zero fabrication.
 
+**Scope rule (locked 2026-04-15 by Yahir):** The deliverable is **the resume only** — HTML + PDF. **No** cover-note markdown, **no** checklist file, **no** audit-table file, **no** "next steps" prose unless explicitly requested. The anti-fabrication discipline still runs internally on every draft; it just doesn't produce a separate artifact.
+
 **Inputs Yahir provides:**
 1. Full job posting text (URL or pasted body).
-2. Target file: which existing resume to fork from (`pca.html` is the default starting point for most clinical/care roles; `transporter.html` for transport/logistics-heavy roles).
+2. Optional: target file to fork from (`pca.html` for clinical/care roles, `transporter.html` for transport/logistics-heavy roles). Default: pick the better fit automatically.
 3. Optional: any new info Billy has shared since the last tailoring (gets added to this facts file first, then pulled into the resume).
 
 **Steps Claude takes:**
 1. Read the posting. Extract: job title, employer, top 5–10 keywords / required skills, must-have credentials, lift / driving / language / onboarding requirements.
 2. Read this `facts/billy-facts.md` end-to-end. For every keyword in the posting, find the matching truth in this file. If a keyword has no matching truth → it does not appear in the resume. (No fabrication. Ever.)
-3. Fork the chosen base HTML to a new file: `applications/<employer-slug>-<role-slug>.html` (e.g., `applications/methodist-pca-2026-05.html`).
+3. Fork the chosen base HTML to a new file: `applications/<employer-slug>-<role-slug>.html` (e.g., `applications/methodist-pca.html`).
 4. Tailor: swap in role-specific bullets from the **Section 4 bullet pool**, pull tailoring-ammunition facts (Section 11) only if the posting calls for them, retune the **Section 6 skills grid** to the 8 most posting-relevant items + 4 constants.
 5. Keep the resume to one page.
-6. Generate a matching PDF (via Chrome print or `build_docx.py`).
-7. Write a short cover-note paragraph (3–5 sentences) Billy can paste into the application's free-text field.
-8. Commit with message: `tailor: <employer> <role> — based on <posting-source>`.
+6. Generate a matching PDF: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=applications/<slug>.pdf "file://$PWD/applications/<slug>.html"`.
+7. Commit with message: `tailor: <employer> <role>`.
+8. Report file paths back to Yahir. Stop.
 
-**Anti-fabrication checklist (run before handing back):**
+**Anti-fabrication checklist (mental, before saving):**
 - [ ] Every bullet traces to a fact in this file.
 - [ ] No certification, system, or piece of equipment is named unless it's already in the **Credentials** table or **Section 11 ammunition**.
 - [ ] All dates match the canonical entries in **Section 4**.
