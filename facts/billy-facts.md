@@ -220,10 +220,10 @@ Goal: drop a job posting in, get a tailored resume out, with zero fabrication.
 2. Read this `facts/billy-facts.md` end-to-end. For every keyword in the posting, find the matching truth in this file. If a keyword has no matching truth → it does not appear in the resume. (No fabrication. Ever.)
 3. Fork the chosen base HTML to a new file: `applications/<employer-slug>-<role-slug>.html` (e.g., `applications/methodist-pca.html`).
 4. Tailor: swap in role-specific bullets from the **Section 4 bullet pool**, pull tailoring-ammunition facts (Section 11) only if the posting calls for them, retune the **Section 6 skills grid** to the 8 most posting-relevant items + 4 constants.
-5. Keep the resume to one page.
-6. Generate a matching PDF: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=applications/<slug>.pdf "file://$PWD/applications/<slug>.html"`.
+5. Render the PDF: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=applications/<slug>.pdf "file://$PWD/applications/<slug>.html"`.
+6. **MANDATORY single-page verification — DO NOT COMMIT until this passes.** Run `mdls -name kMDItemNumberOfPages applications/<slug>.pdf` and confirm the result is exactly `1`. If it is `>1`, loop back and tighten using the documented levers — in this order: (a) CSS `line-height` -0.02 to -0.04 and section `margin-top` -1 to -2px, (b) body `font-size` -0.2pt, (c) tighten prose without removing facts, (d) drop the weakest bullet from the oldest job entry. Re-render and re-run `mdls` after every change. Repeat until the page count equals 1. This is a hard gate: no commit may happen while the PDF is more than one page.
 7. Commit with message: `tailor: <employer> <role>`.
-8. Report file paths back to Yahir. Stop.
+8. Report file paths back to Yahir, including the verified page count from `mdls`. Stop.
 
 **Anti-fabrication checklist (mental, before saving):**
 - [ ] Every bullet traces to a fact in this file.
@@ -231,6 +231,7 @@ Goal: drop a job posting in, get a tailored resume out, with zero fabrication.
 - [ ] All dates match the canonical entries in **Section 4**.
 - [ ] No new soft-skill phrasing invented; pull from **Section 7**.
 - [ ] Spanish proficiency line matches **Section 8** exactly.
+- [ ] PDF page count == 1 (verified via `mdls -name kMDItemNumberOfPages`).
 
 ---
 
