@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billy James Cruz — Memorial Hermann Patient Transporter (FT Evenings)</title>
+<style>
+  @page { margin: 0.3in 0.45in; size: letter; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 9.8pt;
+    line-height: 1.38;
+    color: #2d2d2d;
+    max-width: 8in;
+    margin: 0 auto;
+    padding: 0.3in 0.45in;
+    -webkit-print-color-adjust: exact;
+    -webkit-text-size-adjust: 100%;
+    print-color-adjust: exact;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #0a2647;
+    margin-bottom: 8px;
+  }
+  .header-left h1 {
+    font-size: 22pt;
+    font-weight: 800;
+    color: #0a2647;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+  }
+  .header-left .tagline {
+    font-size: 10pt;
+    color: #4a7fb5;
+    font-weight: 500;
+    margin-top: 2px;
+    letter-spacing: 0.3px;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 9pt;
+    color: #444;
+    line-height: 1.6;
+  }
+  .header-right a { color: #444; text-decoration: none; }
+  .header-right span { display: block; }
+
+  /* ── SECTIONS ── */
+  h2 {
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0a2647;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    padding-bottom: 3px;
+    border-bottom: 1pt solid #d0d8e0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 12px;
+    background: #4a7fb5;
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+
+  /* ── SUMMARY ── */
+  .summary {
+    font-size: 9.5pt;
+    color: #3a3a3a;
+    line-height: 1.5;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .skills-grid li {
+    font-size: 9.5pt;
+    color: #2d2d2d;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  .skills-grid li::marker { color: #4a7fb5; }
+
+  /* ── ENTRIES ── */
+  .entry {
+    margin-top: 5px;
+    page-break-inside: avoid;
+  }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
+  .entry-title {
+    font-weight: 700;
+    font-size: 10pt;
+    color: #1a1a1a;
+  }
+  .entry-date {
+    font-size: 9pt;
+    color: #555;
+    font-style: italic;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-left: 10px;
+  }
+  .entry-org {
+    font-size: 9pt;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2px;
+  }
+  ul {
+    padding-left: 15px;
+    margin-bottom: 0;
+  }
+  li {
+    font-size: 9.5pt;
+    margin-bottom: 1px;
+    color: #2d2d2d;
+    line-height: 1.4;
+  }
+  li::marker { color: #999; }
+
+  /* ── EDUCATION ── */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2px 0;
+    font-size: 9.5pt;
+  }
+  .edu-name { font-weight: 600; color: #1a1a1a; }
+  .edu-detail { color: #555; font-size: 9pt; font-style: italic; }
+
+  /* ── PRINT ── */
+  @media print {
+    body {
+      padding: 0;
+      width: 100%;
+      max-width: none;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .header,
+    .summary,
+    .skills-grid,
+    .edu-row {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .entry {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    h2::before {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    h2 {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    li {
+      orphans: 2;
+      widows: 2;
+    }
+    a[href]::after { content: none !important; }
+    a {
+      color: #444 !important;
+      text-decoration: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <h1>Billy James Cruz</h1>
+    <div class="tagline">Patient Transporter Candidate &nbsp;|&nbsp; EMT-Certified &nbsp;|&nbsp; BLS Provider (AHA) &nbsp;|&nbsp; Lifts 100+ lbs</div>
+  </div>
+  <div class="header-right">
+    <span>Houston, TX Area</span>
+    <span>(409) 673-4859</span>
+    <span><a href="mailto:billyjcruz@icloud.com">billyjcruz@icloud.com</a></span>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<h2>Professional Summary</h2>
+<div class="summary">
+BLS-certified EMT with hands-on patient transport experience on emergency ambulance calls during clinical rotations with the Seguin Fire Department. Trained in stretcher and wheelchair operation, safe lifting and horizontal transfer of patients 100+ lbs, oxygen tank handling, IV pump and Foley catheter management, PPE (gloves, gowns, masks) and infection control, and equipment disinfection. Three-plus years of frontline service leadership at a high-volume 2,000-member facility — accustomed to strong time management and sustained standing, walking, and lifting across full 8-hour shifts. Committed to delivering safe, caring, personalized, and efficient experiences to every patient, staff member, and visitor. Conversational Spanish.
+</div>
+
+<!-- SKILLS -->
+<h2>Skills</h2>
+<ul class="skills-grid">
+  <li>Patient Transportation and Safe Handling</li>
+  <li>Basic Life Support (BLS/AHA)</li>
+  <li>Stretcher and Wheelchair Operation</li>
+  <li>Safe Lifting, Body Mechanics, Horizontal Transfer (100+ lbs)</li>
+  <li>Oxygen Tank Handling</li>
+  <li>IV Pump and Foley Catheter Transport</li>
+  <li>Equipment Disinfection</li>
+  <li>Infection Control and PPE (gloves, gowns, masks)</li>
+  <li>HIPAA Compliance</li>
+  <li>Time Management and Multitasking</li>
+  <li>Data Entry, Collection, and Interpretation</li>
+  <li>Conversational Spanish</li>
+</ul>
+
+<!-- CLINICAL EXPERIENCE -->
+<h2>Healthcare Training and Clinical Experience</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Emergency Medical Technician</span>
+    <span class="entry-date">Jul 2025 - Nov 2025</span>
+  </div>
+  <div class="entry-org">EMS University | San Antonio, TX | Clinical Rotations: Seguin Fire Department</div>
+  <ul>
+    <li>Transported inpatient and outpatient-level patients via stretcher and wheelchair during Seguin Fire Department clinical rotations; assisted with horizontal patient transfers between bed, stretcher, and wheelchair.</li>
+    <li>Managed IV bags, infusion pumps, and Foley catheters during transport; administered oxygen and verified cylinder storage.</li>
+    <li>Delivered verbal handoff reports to receiving staff covering patient status, vitals, and interventions performed.</li>
+    <li>Disinfected equipment before and after each use; tagged damaged items. Applied PPE (gloves, gowns, masks), universal precautions, and isolation procedures to ensure safe care for patients, staff, and visitors.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Recruit Fire Academy</span>
+    <span class="entry-date">Apr 2025 - Aug 2025</span>
+  </div>
+  <div class="entry-org">TEEX | College Station, TX</div>
+  <ul>
+    <li>Completed patient rescue and movement modules emphasizing safe lifting, body mechanics, and fall prevention in high-stress scenarios.</li>
+  </ul>
+</div>
+
+<!-- WORK EXPERIENCE -->
+<h2>Work Experience</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Team Lead</span>
+    <span class="entry-date">Jan 2023 - Mar 2026</span>
+  </div>
+  <div class="entry-org">Lift ATX | Austin, TX</div>
+  <ul>
+    <li>Provided front-line service to 2,000+ active members, resolving requests promptly with a focus on safe, compassionate, and personalized attention.</li>
+    <li>Maintained facility safety: disinfected surfaces, inspected and tagged damaged equipment, kept walkways hazard-free.</li>
+    <li>Managed 15+ daily tasks independently during 8-hour shifts in a high-volume, physically demanding environment — sustained standing, walking, and lifting throughout the full shift.</li>
+    <li>Trained and oriented 8+ new team members on safety protocols and daily workflow procedures.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Director of Operations and Communications</span>
+    <span class="entry-date">Aug 2022 - May 2023</span>
+  </div>
+  <div class="entry-org">Nuclear Baseball Training | Austin, TX</div>
+  <ul>
+    <li>Coordinated scheduling and directed all organization and player operations for 50+ athletes.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">National Scouting Coordinator</span>
+    <span class="entry-date">Aug 2019 - Dec 2022</span>
+  </div>
+  <div class="entry-org">Perfect Game USA | Austin, TX</div>
+  <ul>
+    <li>Collected and interpreted performance data for 200+ athletes annually with strict data entry accuracy and privacy standards.</li>
+  </ul>
+</div>
+
+<!-- CERTIFICATIONS -->
+<h2>Certifications</h2>
+<ul>
+  <li><strong>Basic Life Support (BLS/CPR/AED)</strong> - American Heart Association, AHA Provider (2025) <em>— meets Memorial Hermann's BLS requirement on Day 1</em></li>
+  <li><strong>EMT-Basic, Certified</strong> - Texas Dept. of State Health Services (2026)</li>
+  <li><strong>Basic Structure Fire Suppression</strong> - Texas Commission on Fire Protection (2025)</li>
+</ul>
+
+<!-- EDUCATION -->
+<h2>Education</h2>
+<div class="edu-row">
+  <span class="edu-name">B.S. Sports Management, Public Relations</span>
+  <span class="edu-detail">Texas Tech University, Lubbock, TX (2019)</span>
+</div>
+
+</body>
+</html>
