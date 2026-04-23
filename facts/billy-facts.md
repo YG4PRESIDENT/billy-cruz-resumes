@@ -95,8 +95,9 @@ Patient volume during rotations: _unknown — ask Billy_
 - Completed patient rescue and movement modules: safe lifting, body mechanics, fall prevention. **[T]**
 - Incident command exposure; scene safety; care delivery in high-stress environments. **[O]**
 
-### 4.3 Team Lead — Lift ATX, Austin, TX
+### 4.3 Team Lead (Day-One Founding Team Member) — Lift ATX, Austin, TX
 **Dates:** **Jan 2023 – Mar 2026** *(resolved 2026-04-15 per Billy)*
+**Growth arc:** Day-one founding team member. Joined when the gym had ~20 members; helped scale operations to **2,500+ members** over 3 years. *(Added 2026-04-23 per Yahir.)*
 
 - Led a team of 8 staff members, coordinating daily schedules and ensuring full shift coverage across a facility serving 2,000+ active members. **[P]**
 - Maintained safety, cleanliness, and supply readiness throughout the facility, responding to safety concerns and member requests promptly. **[P]**
@@ -104,6 +105,11 @@ Patient volume during rotations: _unknown — ask Billy_
 - Provided front-line customer service to 2,000+ active members, resolving requests promptly. **[T]**
 - Disinfected surfaces, inspected and tagged damaged equipment, kept walkways hazard-free. **[T]**
 - Managed 15+ daily tasks independently during 8-hour shifts in a high-volume, physically demanding environment. **[T]**
+- Day-one founding team member; helped scale the gym from ~20 members to 2,500+ over 3 years. **[GYM]**
+- Recruited, trained, and onboarded 8+ new staff as the gym scaled from startup to full operations. **[GYM]**
+- Drove member retention and sign-ups through personalized service, facility tours, and community engagement. **[GYM]**
+- Built daily operations SOPs: shift schedules, cleaning protocols, opening/closing checklists as the gym professionalized. **[GYM]**
+- Managed facility expansion: new equipment setup, floor layout optimization, and space buildouts as membership grew. **[GYM]**
 
 ### 4.4 Project Analyst (Contract) — TTM Analytics, Austin, TX
 **Dates:** Jun – Aug 2023 (HTML) / Mar – Jun 2023 (PDF) — *resolve*
@@ -137,7 +143,8 @@ _None documented. Ask Billy if there's anything to fill the early career slot._
 Reuse these verbatim. They are Billy's defensible numbers.
 
 - **8** staff members led at Lift ATX (also "8+ new hires trained")
-- **2,000+** active members served at Lift ATX
+- **~20 → 2,500+** member growth arc at Lift ATX (founding to exit)
+- **2,000+** active members served at Lift ATX (use in hospital resumes; use 2,500+ in gym resumes)
 - **200+** athletes annually at Perfect Game USA
 - **50+** athletes coordinated at Nuclear Baseball Training
 - **15+** daily tasks managed independently per shift at Lift ATX
