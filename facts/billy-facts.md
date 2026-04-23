@@ -96,8 +96,8 @@ Patient volume during rotations: _unknown — ask Billy_
 - Incident command exposure; scene safety; care delivery in high-stress environments. **[O]**
 
 ### 4.3 Team Lead (Day-One Founding Team Member) — Lift ATX, Austin, TX
-**Dates:** **Jan 2023 – Mar 2026** *(resolved 2026-04-15 per Billy)*
-**Growth arc:** Day-one founding team member. Joined when the gym had ~20 members; helped scale operations to **2,500+ members** over 3 years. *(Added 2026-04-23 per Yahir.)*
+**Dates:** **May 2020 – Mar 2026** *(corrected 2026-04-23 per Yahir; was Jan 2023 in earlier HTML/PDFs)*
+**Growth arc:** Day-one founding team member. Joined when the gym had ~20 members; helped scale operations to **2,500+ members** over nearly 6 years. *(Added 2026-04-23 per Yahir.)*
 
 - Led a team of 8 staff members, coordinating daily schedules and ensuring full shift coverage across a facility serving 2,000+ active members. **[P]**
 - Maintained safety, cleanliness, and supply readiness throughout the facility, responding to safety concerns and member requests promptly. **[P]**
